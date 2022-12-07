@@ -1,0 +1,27 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid;
+  }
+</style>
+
+<h1>Hello to contact</h1>
+<p>This is contact Page</p>
+
+<% if (cont.length <1) { %>
+  <p>Data not found!</p>
+  <% } else { %>
+  <table>
+    <tr>
+      <th>Nama</th>
+      <th>Email</th>
+    </tr>
+    <% cont.forEach(contact => { %>
+    <tr>
+      <td><%= contact.name %></td>
+      <td><%= contact.email %></td>
+    </tr>
+    <% }) %>
+  </table>
+  <% } %>
